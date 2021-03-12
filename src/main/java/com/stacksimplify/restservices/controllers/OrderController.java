@@ -68,7 +68,7 @@ public class OrderController {
 		Optional<Order> order=orderRepository.findById(orderid);
 		
 		if(order.isPresent()) {
-			if(order.get().getUser().getId()!=userid) {
+			if(order.get().getUser().getUserid()!=userid) {
 				System.out.println("order not exist");
 			}
 			else {
